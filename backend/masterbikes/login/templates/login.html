@@ -1,0 +1,40 @@
+{% extends 'index.html' %} {% block content %}
+<div class="container login_cont">
+  <div class="foto-icon">
+      <img src="../static/icon.png" alt="icono" class="icono">
+      <h2 class="display-3 titulo-texto">MasterBikes</h2>
+</div>    
+      <form method="POST" action="{{ 'login_ver' }}" autocomplete="off">
+        {% csrf_token %}
+        <br>
+        <div class="form-floating mb-3">
+          <input
+            type="username"
+            class="form-control"
+            id="idusername"
+            name="username"
+            required
+            placeholder="username"
+          />
+          <label for="idusername" class="form-label">Usuario</label>
+        </div>
+        <br>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="idpassword" name="password" required placeholder="Password"/>
+          <label for="idpassword" class="form-label">Contraseña</label>
+        </div>
+
+        <p class="text-end mt-5 ml-2 mb-0">
+          <a href="{{ 'register' }}">Olvidaste tu Contraseña?</a>
+        </p> <br><br><br>
+        <div class="d-grid gap-2 ">
+        <button type="submit" class="btn btn-danger boton1">Iniciar sesión</button>
+        </div>
+      </form>
+</div>
+<div class="login_foto">
+</div>
+
+{% endblock %}
+
+

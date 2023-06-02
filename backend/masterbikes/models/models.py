@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import MinLengthValidator,MaxLengthValidator,EmailValidator
 # Create your models here.
 class TipoReparacion(models.Model):
     name = models.CharField(max_length=45, blank=False, null=False)
@@ -20,6 +20,7 @@ class FormaPago(models.Model):
         return str(self.name)
 
 class Cliente(models.Model):
+    
     user_name = models.CharField(max_length=45, blank=False, null=False)
     email = models.EmailField(max_length=45, blank=False, null=False)
     password = models.CharField(max_length=45, blank=False, null=False)
