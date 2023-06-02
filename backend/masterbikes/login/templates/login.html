@@ -1,36 +1,40 @@
 {% extends 'index.html' %} {% block content %}
-<div class="container">
-  <div class="card">
-    <div class="card-body">
-      <h2 class="card-title text-center">Iniciar sesión</h2>
+<div class="container login_cont">
+  <div class="foto-icon">
+      <img src="../static/icon.png" alt="icono" class="icono">
+      <h2 class="display-3 titulo-texto">MasterBikes</h2>
+</div>    
       <form method="POST" action="{{ 'login_ver' }}" autocomplete="off">
         {% csrf_token %}
-        <div class="mb-3">
-          <label for="username" class="form-label">usuario</label>
+        <br>
+        <div class="form-floating mb-3">
           <input
             type="username"
             class="form-control"
             id="idusername"
             name="username"
             required
+            placeholder="username"
           />
+          <label for="idusername" class="form-label">Usuario</label>
         </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Contraseña</label>
-          <input
-            type="password"
-            class="form-control"
-            id="idpassword"
-            name="password"
-            required
-          />
+        <br>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="idpassword" name="password" required placeholder="Password"/>
+          <label for="idpassword" class="form-label">Contraseña</label>
         </div>
-        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-        <p class="text-center mt-3 mb-0">
-          No tengo cuenta, <a href="{{ 'register' }}">quiero registrarme</a>
-        </p>
+
+        <p class="text-end mt-5 ml-2 mb-0">
+          <a href="{{ 'register' }}">Olvidaste tu Contraseña?</a>
+        </p> <br><br><br>
+        <div class="d-grid gap-2 ">
+        <button type="submit" class="btn btn-danger boton1">Iniciar sesión</button>
+        </div>
       </form>
-    </div>
-  </div>
 </div>
+<div class="login_foto">
+</div>
+
 {% endblock %}
+
+
