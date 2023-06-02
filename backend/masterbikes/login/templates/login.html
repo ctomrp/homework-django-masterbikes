@@ -1,0 +1,36 @@
+{% extends 'index.html' %} {% block content %}
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title text-center">Iniciar sesión</h2>
+      <form method="POST" action="{{ 'login_ver' }}" autocomplete="off">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="username" class="form-label">usuario</label>
+          <input
+            type="username"
+            class="form-control"
+            id="idusername"
+            name="username"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="idpassword"
+            name="password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+        <p class="text-center mt-3 mb-0">
+          No tengo cuenta, <a href="{{ 'register' }}">quiero registrarme</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
