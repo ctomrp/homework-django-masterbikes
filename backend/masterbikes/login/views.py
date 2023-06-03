@@ -29,8 +29,10 @@ def auth_register(request):
             username = form.cleaned_data['username']
             email = form.cleaned_data['email']
             password = form.cleaned_data['password1']
-            user = User.objects.create_user(username=username, email=email, password=password)
-            login(request, user)
+            User.objects.create_user(username=username, email=email, password=password)
+#   En caso de querer logear instantaneamente al usuario. Se puede utilizar el siguiente codigo, borrando la linea de arriba y usando las dos de abajo. 
+            #user = User.objects.create_user(username=username, email=email, password=password)
+            #login(request, user)
             return redirect('auth_login')
     else:
         form = RegistrationForm()
