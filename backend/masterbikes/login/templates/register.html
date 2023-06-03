@@ -8,11 +8,11 @@
       <h2 class="display-3 titulo-texto">MasterBikes</h2>
 </div>
 
-<form method="POST" action="{{ 'guardarregistro' }}" autocomplete="off">
+<form method="POST" action="" autocomplete="off">
   {% csrf_token %}
   <br>
   <div class="form-floating">
-    <input type="text" class="form-control" id="idusername" name="username" required placeholder="Usuario"/>
+    <input type="text" class="form-control" id="id_username" name="username" required placeholder="Usuario"/>
     <label for="username" class="form-label">Usuario</label>
   </div>
 
@@ -22,7 +22,7 @@
     <input
       type="email"
       class="form-control"
-      id="idemail"
+      id="id_email"
       name="email"
       required
       placeholder="Correo electrónico"
@@ -36,8 +36,8 @@
     <input
       type="password"
       class="form-control"
-      id="idpassword"
-      name="password"
+      id="id_password1"
+      name="password1"
       required
       placeholder="Contraseña"
     />
@@ -50,7 +50,8 @@
     <input
       type="password"
       class="form-control"
-      id="confirm-password"
+      id="id_password2"
+      name="password2"
       required
       placeholder="Contraseña"
     />
@@ -65,11 +66,7 @@
   </div>
 
 </form>
-{% if messages %} {% for message in messages %}
-<script>
-  alert("{{ message }}");
-</script>
-{% endfor %} {% endif %}
+
 
   </div>
 </div>
