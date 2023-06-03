@@ -21,6 +21,7 @@ def auth_login(request):
             return render(request, 'login.html', {'error_message': error_message})
     else:
         return(render(request,'login.html'))
+    
 def auth_register(request):
     if request.method=='POST':
         form = RegistrationForm(request.POST)
@@ -39,6 +40,7 @@ def auth_register(request):
     else:
         form = RegistrationForm()
     return(render(request,'register.html'))
+
 def index(request):
     return(render(request,'index.html'))
 
@@ -49,3 +51,7 @@ def formularioArriendo(request):
 def exit(request):
     logout(request)
     return redirect('auth_login')
+
+def recover_password(request):
+    if  request.method == 'GET':       
+        return(render(request,'recover_password.html'))
