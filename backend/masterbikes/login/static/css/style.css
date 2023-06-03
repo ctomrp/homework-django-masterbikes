@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url("./fondo.jpg");
+  background-image: url("../assets/fondo.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,7 +56,7 @@ a{
   align-items: center;
   width: 70%;
   height: 100%;
-  background-image: url("./login_foto.jpg");
+  background-image: url("../assets/login_foto.jpg");
   background-image: rgba(255, 255, 255, .15);
   background-size: cover;
   border-radius: 2%;
