@@ -52,6 +52,13 @@
       </div>
     </nav>
     <div class="container">{% block content %}{% endblock %}</div>
+    <div class"mensaje_login">{% if request.user.is_authenticated%}
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Login Correcto!</h4>
+        <p>Bienvenido {{user.username| upper}} Pudiste Ingresar Correctamente a la pagina!.</p>
+      </div>
+      {%endif%}
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
