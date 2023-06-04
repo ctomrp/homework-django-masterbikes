@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .forms import RegistrationForm
 from django.contrib.auth.models import User
-
+from django.contrib import messages
 
 # Create your views here.
 def auth_login(request):
@@ -31,12 +31,13 @@ def auth_register(request):
             email = form.cleaned_data['email']
             password = form.cleaned_data['password1']
             User.objects.create_user(username=username, email=email, password=password)
+            messages.success(request,"Registro añadido correctamente!")
 #   En caso de querer logear instantaneamente al usuario. 
 # Se puede utilizar el siguiente codigo, borrando la linea de arriba y usando las dos de abajo. 
 #Almacena el formulario que hiciste en un objeto y lo pasa con la funcion login para ingresarte automaticamente
             #user = User.objects.create_user(username=username, email=email, password=password)
             #login(request, user)
-            return redirect('auth_login')
+            return(render(request,'register.html'))
     else:
         form = RegistrationForm()
     return(render(request,'register.html'))
