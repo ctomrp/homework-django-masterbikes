@@ -56,3 +56,4 @@ def exit(request):
 def recover_password(request):
     if  request.method == 'GET':       
         return(render(request,'recover_password.html'))
+    
