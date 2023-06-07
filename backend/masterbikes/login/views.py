@@ -23,8 +23,10 @@ def auth_login(request):
 def auth_register(request):
     if request.method=='POST':
         form = RegistrationForm(request.POST)
+        print(form)
         if form.is_valid():
             username = form.cleaned_data['username']
+            print(username)
             email = form.cleaned_data['email']
             password = form.cleaned_data['password1']
             User.objects.create_user(username=username, email=email, password=password)
