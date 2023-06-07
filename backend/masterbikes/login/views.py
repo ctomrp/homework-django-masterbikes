@@ -32,17 +32,17 @@ def auth_register(request):
             password = form.cleaned_data['password1']
             User.objects.create_user(username=username, email=email, password=password)
 
-            #para la bd a lo bruto sin try except
-            username = request.POST['username']
-            email = request.POST['email']
-            password = request.POST['password1']
-            objCliente = Cliente.objects.create(
-                user_name = username,
-                email = email,
-                password = password
-            )
-            objCliente.save()
-            #fin bd
+            # #para la bd a lo bruto sin try except
+            # username = request.POST['username']
+            # email = request.POST['email']
+            # password = request.POST['password1']
+            # objCliente = Cliente.objects.create(
+            #     user_name = username,
+            #     email = email,
+            #     password = password
+            # )
+            # objCliente.save()
+            # #fin bd
 #   En caso de querer logear instantaneamente al usuario. 
 # Se puede utilizar el siguiente codigo, borrando la linea de arriba y usando las dos de abajo. 
 #Almacena el formulario que hiciste en un objeto y lo pasa con la funcion login para ingresarte automaticamente
