@@ -21,6 +21,7 @@
     <input type="text" class="form-control" id="id_username" name="username" required placeholder="Usuario"/>
     <label for="username" class="form-label">Usuario</label>
   </div>
+  {% comment %} <span id="nameSpan" class="error"></span> {% endcomment %}
 
   <br>
 
@@ -35,6 +36,7 @@
     />
     <label for="email" class="form-label">Correo electrónico</label>
   </div>
+  {% comment %} <span id="emailSpan" class="error"></span> {% endcomment %}
 
   <br>
 
@@ -49,6 +51,7 @@
     />
     <label for="password" class="form-label">Contraseña</label>
   </div>
+  {% comment %} <span id="passwordSpan" class="error"></span> {% endcomment %}
 
   <br>
 
@@ -65,9 +68,12 @@
     >Confirmar contraseña</label
   >
   </div>
+  {% comment %} <span id="passwordSpan2" class="error"></span> {% endcomment %}
+
   <br>
+
   <div class="d-grid gap-2 ">
-  <button type="submit" class="btn btn-danger boton1">Registrase</button>
+  <button type="submit" class="btn btn-danger boton1" id="register" disabled>Registrase</button>
   </div>
 
 </form>
