@@ -1,0 +1,148 @@
+
+.titulo-arriendo{
+  
+    font-family: 'Segoe ui variable display', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ff2f00;
+    font-weight: bold;
+    
+  }
+
+.subtitulo-arriendo{
+    
+    font-family: 'Segoe ui variable display Semibold', Tahoma, Geneva, Verdana, sans-serif;
+    color: #707070;
+    
+}
+
+.bordeRedondeado{
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.bordeRedondeado2{
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.bordeRedondeado3{
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.bordeCuadrado{
+    border: 1px solid gray;
+}
+
+.centro{
+    margin: auto;
+}
+
+/* Coloca los elementos en linea... */
+.linea3{
+    display: inline-block;
+}
+
+.foto-icon{
+    display: flex;
+    align-items: center ;
+}
+
+.icono{
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+  
+.img1{
+    height: 100px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.img2{
+    height: 40px;
+}
+
+.padding1{
+    padding: 1%;
+}
+
+/*
+    Separacion entre los elementos de un 10%
+*/
+.separacion{
+
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.fondo-blanco{
+    background-color: white;
+}
+
+.fondo2{
+    background-color: #e5e0e0;
+}
+
+.fondoNegro{
+    background-color: black;
+}
+
+.degradado{
+        
+    background:linear-gradient(white 25%, #ff7455);
+    background:-webkit-linear-gradient(white 25%, #ff7455);
+    background:-moz-linear-gradient(white 25%, #ff7455);
+    background:-o-linear-gradient(white 25%, #ff7455);
+    background:-ms-linear-gradient(white 25%, #ff7455);
+
+}
+
+.sombra{
+    box-shadow: 5px 5px 10px gray;
+}
+
+/*
+    ---> Eliminados...
+    
+
+.textoNaranjo{
+    
+    font-family: 'Segoe ui variable display', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ff2f00;
+
+}
+
+
+.tirarAlaDerecha{
+    float: right;
+}
+
+.padding1{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+
+
+
+
+*/
+
+/*
+Borde...
+- Gris claro.
+- Redondeado.
+*/
+
+
+.borde3{
+
+    border: 1px solid #e5e0e0;
+    border-radius: 10px 10px 10px 10px;
+
+}
