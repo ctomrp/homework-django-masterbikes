@@ -1,84 +1,85 @@
 {% extends 'index.html' %} {% block content %}
-
-<div class="login_foto">
-</div>
-<div class="container login_cont">
-  <div class="foto-icon">
-      <img src="../static/assets/icon.png" alt="icono" class="icono">
-      <h2 class="display-3 titulo-texto">MasterBikes</h2>
-</div>
-
-<form method="POST" action="" autocomplete="off">
-  {% csrf_token %}
-  <br>
-  {%for msg in messages%}
-  <div class="alert alert-success  alert-dismissible fade show" role="alert">
-    <strong>{{ msg }}</strong> 
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>  
-  {% endfor %}
-  <div class="form-floating">
-    <input type="text" class="form-control" id="id_username" name="username" required placeholder="Usuario"/>
-    <label for="username" class="form-label">Usuario</label>
+<div class="container">
+  <div class="login_foto">
   </div>
-  {% comment %} <span id="nameSpan" class="error"></span> {% endcomment %}
-
-  <br>
-
-  <div class="form-floating">
-    <input
-      type="email"
-      class="form-control"
-      id="id_email"
-      name="email"
-      required
-      placeholder="Correo electrónico"
-    />
-    <label for="email" class="form-label">Correo electrónico</label>
+  <div class="container containerLuis login_cont">
+    <div class="foto-icon">
+        <img src="../static/assets/icon.png" alt="icono" class="icono">
+        <h2 class="display-3 titulo-texto">MasterBikes</h2>
   </div>
-  {% comment %} <span id="emailSpan" class="error"></span> {% endcomment %}
-
-  <br>
-
-  <div class="form-floating">
-    <input
-      type="password"
-      class="form-control"
-      id="id_password1"
-      name="password1"
-      required
-      placeholder="Contraseña"
-    />
-    <label for="password" class="form-label">Contraseña</label>
-  </div>
-  {% comment %} <span id="passwordSpan" class="error"></span> {% endcomment %}
-
-  <br>
-
-  <div class="form-floating">
-    <input
-      type="password"
-      class="form-control"
-      id="id_password2"
-      name="password2"
-      required
-      placeholder="Contraseña"
-    />
-    <label for="confirm-password" class="form-label"
-    >Confirmar contraseña</label
-  >
-  </div>
-  {% comment %} <span id="passwordSpan2" class="error"></span> {% endcomment %}
-
-  <br>
-
-  <div class="d-grid gap-2 ">
-  <button type="submit" class="btn btn-danger boton1" id="register" disabled>Registrase</button>
-  </div>
-
-</form>
-
-
+  
+  <form method="POST" action="" autocomplete="off">
+    {% csrf_token %}
+    <br>
+    {%for msg in messages%}
+    <div class="alert alert-success  alert-dismissible fade show" role="alert">
+      <strong>{{ msg }}</strong> 
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>  
+    {% endfor %}
+    <div class="form-floating">
+      <input type="text" class="form-control" id="id_username" name="username" required placeholder="Usuario"/>
+      <label for="username" class="form-label">Usuario</label>
+    </div>
+    {% comment %} <span id="nameSpan" class="error"></span> {% endcomment %}
+  
+    <br>
+  
+    <div class="form-floating">
+      <input
+        type="email"
+        class="form-control"
+        id="id_email"
+        name="email"
+        required
+        placeholder="Correo electrónico"
+      />
+      <label for="email" class="form-label">Correo electrónico</label>
+    </div>
+    {% comment %} <span id="emailSpan" class="error"></span> {% endcomment %}
+  
+    <br>
+  
+    <div class="form-floating">
+      <input
+        type="password"
+        class="form-control"
+        id="id_password1"
+        name="password1"
+        required
+        placeholder="Contraseña"
+      />
+      <label for="password" class="form-label">Contraseña</label>
+    </div>
+    {% comment %} <span id="passwordSpan" class="error"></span> {% endcomment %}
+  
+    <br>
+  
+    <div class="form-floating">
+      <input
+        type="password"
+        class="form-control"
+        id="id_password2"
+        name="password2"
+        required
+        placeholder="Contraseña"
+      />
+      <label for="confirm-password" class="form-label"
+      >Confirmar contraseña</label
+    >
+    </div>
+    {% comment %} <span id="passwordSpan2" class="error"></span> {% endcomment %}
+  
+    <br>
+  
+    <div class="d-grid gap-2 ">
+    <button type="submit" class="btn btn-danger boton1" id="register" disabled>Registrase</button>
+    </div>
+  
+  </form>
+  
+  
+    </div>
   </div>
 </div>
 {% endblock %}

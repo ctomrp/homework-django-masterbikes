@@ -92,7 +92,7 @@
 }
 
 .degradado{
-        
+    
     background:linear-gradient(white 25%, #ff7455);
     background:-webkit-linear-gradient(white 25%, #ff7455);
     background:-moz-linear-gradient(white 25%, #ff7455);
@@ -145,4 +145,15 @@ Borde...
     border: 1px solid #e5e0e0;
     border-radius: 10px 10px 10px 10px;
 
+}
+
+.bg-arriendo{
+    background-color: #ff7455;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.img-bici{
+    height: 150px;
+    width: auto;
 }

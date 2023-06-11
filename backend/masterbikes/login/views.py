@@ -61,7 +61,7 @@ def recover_password(request):
 # Bastian...
     
 @login_required
-def formularioArriendo(request):
+def formularioarriendo(request):
 
     objBici1 = Bicicleta.objects.raw('select * from models_bicicleta where tipo_bicicleta_id = 1;')
     objBici2 = Bicicleta.objects.raw('select * from models_bicicleta where tipo_bicicleta_id = 2;')
@@ -75,7 +75,7 @@ def formularioArriendo(request):
         'tipo3' : objBici3
     }
 
-    return(render(request,'formularioArriendo.html', diccionario))
+    return(render(request,'formularioarriendo.html', diccionario))
 
 def guardado(request):
     print('--> Ajajá esto saldrá en la consola donde está corriendo el server de Django...')
