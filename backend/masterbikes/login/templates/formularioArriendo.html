@@ -1,5 +1,5 @@
 {% extends 'index.html' %} {% block content %}
-<div class="container degradado bordeRedondeado2">
+<div class="degradado bordeRedondeado2">
   <form action="guardado" method="post">
     {% csrf_token %}
 
@@ -13,21 +13,16 @@
       <br />
       <br />
       <br />
-      <center>
-        <div>
-          <img
-            src="../static/assets/icon.png"
-            alt="icono"
-            class="icono linea3"
-          />
-          <h1 class="titulo-arriendo linea3">Arriendo Bicicleta</h1>
-        </div>
-      </center>
+
+      <div class="text-center">
+        <img src="../static/assets/icon.png" alt="icono" class="icono linea3" />
+        <h1 class="titulo-arriendo linea3">Arriendo Bicicleta</h1>
+      </div>
 
       <br />
-      <center>
-        <h4 class="subtitulo-arriendo">Tipo bicicleta</h4>
-      </center>
+
+      <h4 class="text-center">Tipo bicicleta</h4>
+
       <br />
     </div>
     <br />
@@ -35,93 +30,86 @@
     <br />
 
     <div class="row">
-      <div class="col-3"></div>
+      <div class="col-2"></div>
 
-      <div class="col-3">
-        <center>
-          <h4 class="subtitulo-arriendo">Escoger bicicleta(s)</h4>
-          <!--  -->
-          <!--  -->
-          <select id="bicicletasID" size="6" class="w-100 linea3 form-select">
-            <optgroup label="Paseo" id="paseoID1">
-              {% for i in tipo1 %}
-              <option value="{{i.id}}">
-                Color: {{i.color}} - Tamaño Aro: {{i.tamano_aro}}
-              </option>
-              {% endfor %}
-            </optgroup>
+      <div class="col-4 text-center">
+        <h4 class="subtitulo-arriendo">Escoger bicicleta(s)</h4>
+        <!--  -->
+        <!--  -->
+        <select id="bicicletasID" size="6" class="w-100 linea3 form-select">
+          <optgroup label="Paseo" id="paseoID1">
+            {% for i in tipo1 %}
+            <option value="{{i.id}}">
+              Color: {{i.color}} - Tamaño Aro: {{i.tamano_aro}}
+            </option>
+            {% endfor %}
+          </optgroup>
 
-            <optgroup label="Montaña" id="montanaID1">
-              {% for i in tipo2 %}
-              <option value="{{i.id}}">
-                Color: {{i.color}} - Tamaño Aro: {{i.tamano_aro}}
-              </option>
-              {% endfor %}
-            </optgroup>
+          <optgroup label="Montaña" id="montanaID1">
+            {% for i in tipo2 %}
+            <option value="{{i.id}}">
+              Color: {{i.color}} - Tamaño Aro: {{i.tamano_aro}}
+            </option>
+            {% endfor %}
+          </optgroup>
 
-            <optgroup label="Ciclismo" id="ciclismoID1">
-              {% for i in tipo3 %}
-              <option value="{{i.id}}">
-                Color: {{i.color}} - Tamaño Aro: {{i.tamano_aro}}
-              </option>
-              {% endfor %}
-            </optgroup>
-          </select>
+          <optgroup label="Ciclismo" id="ciclismoID1">
+            {% for i in tipo3 %}
+            <option value="{{i.id}}">
+              Color: {{i.color}} - Tamaño Aro: {{i.tamano_aro}}
+            </option>
+            {% endfor %}
+          </optgroup>
+        </select>
 
-          <br />
-          <br />
-          <button
-            type="button"
-            id="agregarID"
-            class="w-100 bordeRedondeado fondo2 titulo-arriendo"
-          >
-            Agregar
-          </button>
-        </center>
+        <br />
+        <br />
+        <button
+          type="button"
+          id="agregarID"
+          class="w-100 bordeRedondeado fondo2 titulo-arriendo"
+        >
+          Agregar
+        </button>
       </div>
-      <div class="col-3">
-        <center>
-          <h4 class="subtitulo-arriendo">Bicicleta(s) por Arrendar</h4>
+      <div class="col-4 text-center">
+        <h4 class="subtitulo-arriendo">Bicicleta(s) por Arrendar</h4>
 
-          <select id="carritoID" size="6" class="linea3 w-100 form-select">
-            <optgroup label="Paseo" id="paseoID2"></optgroup>
+        <select id="carritoID" size="6" class="linea3 w-100 form-select">
+          <optgroup label="Paseo" id="paseoID2"></optgroup>
 
-            <optgroup label="Montaña" id="montanaID2"></optgroup>
+          <optgroup label="Montaña" id="montanaID2"></optgroup>
 
-            <optgroup label="Ciclismo" id="ciclismoID2"></optgroup>
-          </select>
+          <optgroup label="Ciclismo" id="ciclismoID2"></optgroup>
+        </select>
 
-          <textarea
-            name="listaBicis"
-            hidden
-            id="ocultoID"
-            cols="30"
-            rows="1"
-          ></textarea>
-          <br />
-          <br />
-          <button
-            type="button"
-            id="eliminarID"
-            class="w-100 bordeRedondeado fondo2 titulo-arriendo"
-          >
-            Eliminar
-          </button>
-        </center>
+        <textarea
+          name="listaBicis"
+          hidden
+          id="ocultoID"
+          cols="30"
+          rows="1"
+        ></textarea>
+        <br />
+        <br />
+        <button
+          type="button"
+          id="eliminarID"
+          class="w-100 bordeRedondeado fondo2 titulo-arriendo"
+        >
+          Eliminar
+        </button>
       </div>
 
-      <div class="col-3"></div>
+      <div class="col-2"></div>
     </div>
-    <center>
-      <br />
-    </center>
 
     <br />
     <br />
 
     <div class="row">
-      <div class="col-4"></div>
-      <div class="col-4 bordeRedondeado2 sombra">
+      <div class="col-2"></div>
+      <div class="col-6 bordeRedondeado2 sombra">
         <div class="row">
           <div class="col-6 bordeRedondeado2 fondo2">
             <center>
@@ -151,7 +139,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4"></div>
+      <div class="col-2"></div>
     </div>
 
     <!-- codigo eliminado 1 -->
@@ -164,9 +152,9 @@
     <br />
 
     <div class="row">
-      <div class="col-4"></div>
+      <div class="col-2"></div>
 
-      <div class="col-4">
+      <div class="col-6">
         <div class="bordeCuadrado fondo-blanco sombra">
           <center>
             <input type="radio" name="formaPago" value="2" />
@@ -187,32 +175,30 @@
           </center>
         </div>
       </div>
-      <div class="col-4"></div>
+      <div class="col-2"></div>
     </div>
     <br />
     <br />
-    <center>
-      <h4 class="subtitulo-arriendo">Depósito Garantía</h4>
-      <br />
-      <h4>
-        <input
-          type="number"
-          class="subtitulo-arriendo bordeRedondeado padding1 fondo-blanco sombra"
-          value="8000"
-          name="garantia"
-        />
-        <!-- <label for="" ></label> -->
-      </h4>
-      <br />
-      <br />
+    <h4 class="subtitulo-arriendo text-center">Depósito Garantía</h4>
+    <br />
+    <h4>
       <input
-        type="submit"
-        value="Enviar Solicitud"
-        name=""
-        id=""
-        class="btn btn-danger sombra"
+        type="number"
+        class="subtitulo-arriendo bordeRedondeado padding1 fondo-blanco sombra"
+        value="8000"
+        name="garantia"
       />
-    </center>
+      <!-- <label for="" ></label> -->
+    </h4>
+    <br />
+    <br />
+    <input
+      type="submit"
+      value="Enviar Solicitud"
+      name=""
+      id=""
+      class="btn btn-danger sombra"
+    />
 
     <br />
     <br />

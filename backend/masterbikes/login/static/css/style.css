@@ -39,7 +39,7 @@ a{
     margin-top: 100px;
   }
 */  
-.container-luis{
+.container{
   display: flex;
   height: 600px;
   width: 900px;
@@ -128,6 +128,7 @@ input, label{
     
     font-family: 'Segoe ui variable display Semibold', Tahoma, Geneva, Verdana, sans-serif;
     color: #707070;
+    font-size: medium;
     
 }
 
