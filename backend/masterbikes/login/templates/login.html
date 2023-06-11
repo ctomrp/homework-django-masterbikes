@@ -1,50 +1,51 @@
 {% extends 'index.html' %} {% block content %}
-<div class="container login_cont shadow">
-  <div class="foto-icon">
-    <img src="../static/assets/icon.png" alt="icono" class="icono" />
-    <h2 class="display-3 titulo-texto">MasterBikes</h2>
+<div class="container">
+  <div class="container container-luis login_cont shadow">
+    <div class="foto-icon">
+      <img src="../static/assets/icon.png" alt="icono" class="icono" />
+      <h2 class="display-3 titulo-texto">MasterBikes</h2>
+    </div>
+    <form method="POST" action="" autocomplete="off">
+      {% csrf_token %}
+      <br />
+      <div class="form-floating mb-3">
+        <input
+          type="username"
+          class="form-control"
+          id="usernome"
+          name="username"
+          required
+          placeholder="username"
+        />
+        <label for="idusername" class="form-label">Usuario</label>
+      </div>
+      <br />
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          required
+          placeholder="Password"
+        />
+        <label for="idpassword" class="form-label">Contraseña</label>
+
+        <p class="text-end mt-5 ml-2 mb-0">
+          <a href="{{ 'recover_password' }}" class="help"
+            >Olvidaste tu Contraseña?</a
+          >
+        </p>
+        <br /><br /><br />
+      </div>
+
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-danger boton1">
+          Iniciar sesión
+        </button>
+      </div>
+    </form>
   </div>
-  <form method="POST" action="" autocomplete="off">
-    {% csrf_token %}
-    <br />
-    <div class="form-floating mb-3">
-      <input
-        type="username"
-        class="form-control"
-        id="usernome"
-        name="username"
-        required
-        placeholder="username"
-      />
-      <label for="idusername" class="form-label">Usuario</label>
-    </div>
-    <br />
-    <div class="form-floating">
-      <input
-        type="password"
-        class="form-control"
-        id="password"
-        name="password"
-        required
-        placeholder="Password"
-      />
-      <label for="idpassword" class="form-label">Contraseña</label>
-
-      <p class="text-end mt-5 ml-2 mb-0">
-        <a href="{{ 'recover_password' }}" class="help"
-          >Olvidaste tu Contraseña?</a
-        >
-      </p>
-      <br /><br /><br />
-    </div>
-
-    <div class="d-grid gap-2">
-      <button type="submit" class="btn btn-danger boton1">
-        Iniciar sesión
-      </button>
-    </div>
-  </form>
+  <div class="login_foto"></div>
 </div>
-<div class="login_foto"></div>
-
 {% endblock %}

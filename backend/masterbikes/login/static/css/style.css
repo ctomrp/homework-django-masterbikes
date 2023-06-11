@@ -6,7 +6,14 @@
 
 body {
   font-family: Arial, sans-serif;
-  position: relative;
+  background-image: url("../assets/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgba(255, 249, 249, 0.7);
+  overflow: auto;
+
 }
 
 body::after {
@@ -32,7 +39,7 @@ a{
     margin-top: 100px;
   }
 */  
-.container{
+.container-luis{
   display: flex;
   height: 600px;
   width: 900px;
@@ -41,7 +48,7 @@ a{
   align-items: center;
 }
 
-.login_cont, .login_foto{
+.login_cont{
     background: rgba(255, 255, 255, .5);
     box-shadow: 0 5px 15px rgba(0, 0,0, .5);    
     backdrop-filter: blur(15px); 
@@ -68,7 +75,7 @@ a{
   background-size: cover;
   border-radius: 2%;
   filter: blur(1px) grayscale(10%) brightness(80%);  
-}
+} 
 
 .form-floating{
   width: 300px;
@@ -108,3 +115,144 @@ input, label{
   font-size: smaller;
   color: orangered;
 }
+/* Bastian */
+.titulo-arriendo{
+  
+    font-family: 'Segoe ui variable display', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ff2f00;
+    font-weight: bold;
+    
+  }
+
+.subtitulo-arriendo{
+    
+    font-family: 'Segoe ui variable display Semibold', Tahoma, Geneva, Verdana, sans-serif;
+    color: #707070;
+    
+}
+
+.bordeRedondeado{
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.bordeRedondeado2{
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.bordeRedondeado3{
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.bordeCuadrado{
+    border: 1px solid gray;
+}
+
+.centro{
+    margin: auto;
+}
+
+/* Coloca los elementos en linea... */
+.linea3{
+    display: inline-block;
+}
+
+
+
+  
+.img1{
+    height: 100px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.img2{
+    height: 40px;
+}
+
+.padding1{
+    padding: 1%;
+}
+
+/*
+    Separacion entre los elementos de un 10%
+*/
+.separacion{
+
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.fondo-blanco{
+    background-color: white;
+}
+
+.fondo2{
+    background-color: #e5e0e0;
+}
+
+.fondoNegro{
+    background-color: black;
+}
+
+.degradado{
+        
+    background:linear-gradient(white 25%, #ff7455);
+    background:-webkit-linear-gradient(white 25%, #ff7455);
+    background:-moz-linear-gradient(white 25%, #ff7455);
+    background:-o-linear-gradient(white 25%, #ff7455);
+    background:-ms-linear-gradient(white 25%, #ff7455);
+
+}
+
+.sombra{
+    box-shadow: 5px 5px 10px gray;
+}
+
+/*
+    ---> Eliminados...
+    
+
+.textoNaranjo{
+    
+    font-family: 'Segoe ui variable display', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ff2f00;
+
+}
+
+
+.tirarAlaDerecha{
+    float: right;
+}
+
+.padding1{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+
+
+
+
+*/
+
+/*
+Borde...
+- Gris claro.
+- Redondeado.
+*/
+
+
+.borde3{
+
+    border: 1px solid #e5e0e0;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
