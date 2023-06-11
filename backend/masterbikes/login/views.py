@@ -103,7 +103,7 @@ def guardado(request):
         
                 
         objPago = FormaPago.objects.get(id = formaPago)
-        objCliente = Cliente.objects.get(id = request.user.id)
+        objCliente = User.objects.get(id = request.user.id)
 
         objArr = Arriendo.objects.create(
             deposito_garantia = garantia,

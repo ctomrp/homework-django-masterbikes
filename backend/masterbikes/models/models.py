@@ -1,5 +1,7 @@
 from django.db import models
 from django.core.validators import MinLengthValidator,MaxLengthValidator,EmailValidator
+from django.contrib.auth.models import User
+
 # Create your models here.
 class TipoReparacion(models.Model):
     name = models.CharField(max_length=45, blank=False, null=False)
@@ -32,7 +34,8 @@ class Reparacion(models.Model):
     fecha_reparacion = models.DateTimeField(max_length=45, blank=False, null=False)
     reparable = models.BooleanField(null=True)
     descripcion = models.TextField()
-    cliente = models.ForeignKey('Cliente',on_delete=models.CASCADE)
+    #cliente = models.ForeignKey('Cliente',on_delete=models.CASCADE)
+    cliente = models.ForeignKey(User,on_delete=models.CASCADE)
     tipo_reparacion = models.ForeignKey('TipoReparacion',on_delete=models.CASCADE)
 
     def __str__(self):
@@ -43,7 +46,8 @@ class Arriendo(models.Model):
     fecha_inicio = models.DateTimeField(max_length=45, null=False)
     fecha_termino = models.DateTimeField(max_length=45, null=True)
     deposito_garantia = models.IntegerField(null=False)
-    cliente = models.ForeignKey('Cliente',on_delete=models.CASCADE)
+    #cliente = models.ForeignKey('Cliente',on_delete=models.CASCADE)
+    cliente = models.ForeignKey(User,on_delete=models.CASCADE)
     forma_pago = models.ForeignKey('FormaPago',on_delete=models.CASCADE)
 
     def __str__(self):
