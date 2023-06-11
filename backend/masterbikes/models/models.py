@@ -42,7 +42,7 @@ class Reparacion(models.Model):
 class Arriendo(models.Model):
     fecha_inicio = models.DateTimeField(max_length=45, null=False)
     fecha_termino = models.DateTimeField(max_length=45, null=True)
-    deposito_garantia = models.BooleanField(null=True)
+    deposito_garantia = models.IntegerField(null=False)
     cliente = models.ForeignKey('Cliente',on_delete=models.CASCADE)
     forma_pago = models.ForeignKey('FormaPago',on_delete=models.CASCADE)
 
