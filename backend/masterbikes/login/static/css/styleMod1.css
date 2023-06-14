@@ -1,26 +1,4 @@
 
-  
-  a{
-    color: black;
-  }
-  /*  
-  .card {
-      width: 300px;
-      margin: 0 auto;
-      margin-top: 100px;
-    }
-  */  
-  .login_cont{
-      background: rgba(255, 255, 255, .5);
-      box-shadow: 0 5px 15px rgba(0, 0,0, .5);    
-      backdrop-filter: blur(15px); 
-      display:flex;
-      flex-direction: column;
-      width: 90%;
-      margin-left: 0.1px;
-      margin-top: 0.5px;
-      border-radius: 2%;
-  }
   .login_foto{
     display: flex;
     justify-content: center;
@@ -32,31 +10,9 @@
     background-size: cover;
     border-radius: 2%;
     filter: blur(1px) grayscale(10%) brightness(80%);  
-  }
-  
-  .form-floating{
-    width: 300px;
-  }
-  .foto-icon{
-    display: flex;
-    align-items: center ;
-  }
-  .icono{
-    height: 50px;
-    width: 50px;
-    margin-right: 10px;
-  }
-  
+  } 
   .btn{
-    border-radius: 30px;
-    padding: 1rem;
     border: 1px solid gray;
-  }
-  
-  .help{
-    text-decoration: none;
-    font-weight: bold;
-    color: #333333;
   }
   
 body {
@@ -67,19 +23,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: rgba(255, 249, 249, 0.7);
-    overflow: hidden;
-  
-  }
-  
-  
-  
-  /*
-  Mantener...
-  */
-  
-  
-  .titulo-texto{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ff2f00;
+    overflow: auto;
   
   }
