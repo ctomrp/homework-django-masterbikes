@@ -133,3 +133,7 @@ def guardado(request):
             objArrBic.save()
 
     return render(request, 'guardado.html')
+
+@login_required
+def repair_form(request):
+    return render(request,'repair_form.html')
