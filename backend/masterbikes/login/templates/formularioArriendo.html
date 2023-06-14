@@ -14,10 +14,8 @@
       <br />
       <br />
 
-      <div class="text-center">
-        <img src="../static/assets/icon.png" alt="icono" class="icono linea3" />
-        <h1 class="titulo-arriendo linea3">Arriendo Bicicleta</h1>
-      </div>
+      <h2 class="text-center">Arriendo de bicicletas</h2>
+
 
       <br />
 
@@ -33,10 +31,10 @@
       <div class="col-2"></div>
 
       <div class="col-4 text-center">
-        <h4 class="subtitulo-arriendo">Escoger bicicleta(s)</h4>
+        <h5 class="">Escoger bicicleta(s)</h5>
         <!--  -->
         <!--  -->
-        <select id="bicicletasID" size="6" class="w-100 linea3 form-select">
+        <select id="bicicletasID" class="w-100 linea3 form-select">
           <optgroup label="Paseo" id="paseoID1">
             {% for i in tipo1 %}
             <option value="{{i.id}}">
@@ -73,9 +71,9 @@
         </button>
       </div>
       <div class="col-4 text-center">
-        <h4 class="subtitulo-arriendo">Bicicleta(s) por Arrendar</h4>
+        <h5 class="">Bicicleta(s) por Arrendar</h5>
 
-        <select id="carritoID" size="6" class="linea3 w-100 form-select">
+        <select id="carritoID" class="linea3 w-100 form-select">
           <optgroup label="Paseo" id="paseoID2"></optgroup>
 
           <optgroup label="Montaña" id="montanaID2"></optgroup>
@@ -107,11 +105,8 @@
     <br />
     <br />
 
-    <div class="row">
-      <div class="col-2"></div>
-      <div class="col-6 bordeRedondeado2 sombra">
-        <div class="row">
-          <div class="col-6 bordeRedondeado2 fondo2">
+    <div class="d-flex flex-row mx-auto">
+          <div class="bordeRedondeado2 fondo2">
             <center>
               <br />
               <label for="" class="titulo-arriendo"
@@ -124,7 +119,7 @@
             <br />
             <br />
           </div>
-          <div class="col-6">
+          <div class="bordeRedondeado2 fondo2">
             <center>
               <br />
               <label class="titulo-arriendo" for=""
@@ -137,9 +132,6 @@
             <br />
             <br />
           </div>
-        </div>
-      </div>
-      <div class="col-2"></div>
     </div>
 
     <!-- codigo eliminado 1 -->
@@ -147,7 +139,7 @@
     <br />
     <br />
     <center>
-      <h4 class="subtitulo-arriendo">Forma Pago</h4>
+      <h5 class="">Forma Pago</h5>
     </center>
     <br />
 
@@ -179,7 +171,7 @@
     </div>
     <br />
     <br />
-    <h4 class="subtitulo-arriendo text-center">Depósito Garantía</h4>
+    <h5 class="text-center">Depósito Garantía</h5>
     <br />
     <h4>
       <input
