@@ -19,6 +19,8 @@ $("#agregarID").click(function(){
         $('#enviarID').attr('disabled', false);
         
         $("#temporalID").remove();
+        $("#mensajeID").append("<div id='temporalID' class='correcto'>" + "¡Correcto!"
+        + "</div>");
     }else{
 
     }
@@ -37,13 +39,10 @@ $("#eliminarID").click(function(){
     }else{
         $('#enviarID').attr('disabled', true);
 
+        $("#temporalID").remove();
         $("#mensajeID").append("<div id='temporalID'>" + "Error. Debe arrendar al menos una bicicleta."
         + "</div>");
     }
-});
-
-$("#fechaInicioID").change(function(){
-    alert(Date.now());
 });
 
 
@@ -52,6 +51,11 @@ $("#fechaInicioID").change(function(){
  * 
  * 
  * 
+
+$("#fechaInicioID").change(function(){
+    alert(Date.now());
+});
+
 
 
 $("#agregarID").click(function(){

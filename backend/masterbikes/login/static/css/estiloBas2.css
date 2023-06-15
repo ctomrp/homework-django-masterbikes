@@ -1,6 +1,24 @@
 
 
-.error{
-    color: red;
-    font-size: 1rem;
+.correcto{
+    
+    color: green;
+    font-weight: bold;
+
 }
+
+
+.error2{
+    color: orangered;
+    font-weight: bold;
+  }
+
+  
+.container3{
+    display: flex;
+    width: 900px;
+    margin: auto;
+    margin-top: 60px;
+    align-items: center;
+  }
+  
