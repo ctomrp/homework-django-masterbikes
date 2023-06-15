@@ -203,11 +203,11 @@ input, label{
 
 .degradado{
         
-    background:linear-gradient(white 25%, #ff7455);
-    background:-webkit-linear-gradient(white 25%, #ff7455);
-    background:-moz-linear-gradient(white 25%, #ff7455);
-    background:-o-linear-gradient(white 25%, #ff7455);
-    background:-ms-linear-gradient(white 25%, #ff7455);
+    background:linear-gradient(rgba(255, 255, 255, .5) 100%, #ff7455);
+    background:-webkit-linear-gradient(rgba(255, 255, 255, .5) 100%, #ff7455);
+    background:-moz-linear-gradient(rgba(255, 255, 255, .5) 100%, #ff7455);
+    background:-o-linear-gradient(rgba(255, 255, 255, .5) 100%, #ff7455);
+    background:-ms-linear-gradient(rgba(255, 255, 255, .5) 100%, #ff7455);
 
 }
 
