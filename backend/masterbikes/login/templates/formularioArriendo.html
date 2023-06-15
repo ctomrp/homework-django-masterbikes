@@ -1,7 +1,7 @@
 {% extends 'index.html' %} {% block content %}
 <div class="degradado bordeRedondeado2">
   <br />
-  <h2 class="text-center">Reparación de bicicletas</h2>
+  <h2 class="text-center">Formulario de Arriendo</h2>
 
   <form action="guardado" method="post">
     {% csrf_token %}
@@ -10,8 +10,7 @@
     <input type="submit" value="Enviar Solicitud" name="" id="" class="btn btn-danger sombra">
      -->
 
-    <div>
-      <!--  class="foto-icon" -->
+    <!-- <div>
 
       <br />
       <br />
@@ -19,7 +18,8 @@
       <h4 class="text-center">Tipo bicicleta</h4>
 
       <br />
-    </div>
+    </div> -->
+
     <br />
 
 
@@ -109,11 +109,11 @@
             <center>
               <br />
               <label for="" class="titulo-arriendo"
-                >Fecha Inicio Arriendo</label
+                >Fecha Inicio Arriendo (*)</label
               >
               <br />
               <br />
-              <input type="date" name="fechaInicio" id="" />
+              <input type="date" name="fechaInicio" id="fechaInicioID" />
             </center>
             <br />
             <br />
@@ -122,11 +122,11 @@
             <center>
               <br />
               <label class="titulo-arriendo" for=""
-                >Fecha Término Arriendo</label
+                >Fecha Término Arriendo (*)</label
               >
               <br />
               <br />
-              <input type="date" name="fechaFin" id="" />
+              <input type="date" name="fechaFin" id="fechaFinID" />
             </center>
             <br />
             <br />
@@ -151,7 +151,7 @@
       <div class="col-6">
         <div class="bordeCuadrado fondo-blanco sombra">
           <center>
-            <input type="radio" name="formaPago" value="2" />
+            <input type="radio" name="formaPago" value="2" checked />
             <label for="" class="subtitulo-arriendo">Débito</label>
             <img
               src="../static/assets/credito-debito/debito.png"
@@ -185,12 +185,26 @@
       <!-- <label for="" ></label> -->
     </h4>
     <br />
+    
+    <!-- <label for="" id="mensajeID">Prueba</label>
+    <label for="">asasas</label> -->
+
+    <div>
+      (*) = Campos Obligatorios.
+    </div>
+    <br>
+    
+    <div class="error" id="mensajeID">
+      <div id="temporalID">
+      </div>
+    </div>
+
     <br />
     <input
       type="submit"
       value="Enviar Solicitud"
       name=""
-      id=""
+      id="enviarID"
       class="btn btn-danger sombra"
     />
 
@@ -199,4 +213,6 @@
     <br />
   </form>
 </div>
+
+<script defer src="../static/js/v2.js"></script>
 {% endblock %}
