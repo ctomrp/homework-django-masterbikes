@@ -9,25 +9,27 @@
 
       <div class="form-floating mb-3">
         <br>
-        <input type="date" class="form-control" id="fecha_reparacion" name="fecha_reparacion" required/>
-        <label for="fecha_reparacion" class="form-label">Fecha de reparacion</label>
+        <input type="date" class="form-control" id="fecha_reparacionId" name="fecha_reparacion" required/>
+        <label for="fecha_reparacionId" class="form-label">Fecha de reparacion</label>
         <br>
       </div>
 
       <div class="form-floating">
         <br>
-        <textarea class="form-control" placeholder="Describa su problema" id="descripcion"></textarea>
-        <label for="descripcion" class="mt-3">Descripción del problema</label>
+        <textarea class="form-control" placeholder="Describa su problema" id="descripcionId" name="descripcion"></textarea>
+        <label for="descripcionId" class="mt-3">Descripción del problema</label>
         <br>
       </div>
 
       <div class="form-floating">
         <br>
-        <select class="select-style" name="tipo_reparacion" id="tipo_reparacion">
+        <select class="select-style" name="tipo_reparacion" id="tipo_reparacionId">
             <option value="" disabled selected>Seleccione el tipo de reparación</option>
-            {% for tipo_reparacion in tipos_reparacion %}
-                <option value="{{ tipo_reparacion.name }}">{{ tipo_reparacion.name }}</option>
+          {% if tipo_reparacion%}  
+            {% for i in tipo_reparacion %}
+                <option value="{{ i.id }}">{{ i.name }}</option>
             {% endfor %}
+          {% endif %}  
         </select>
         <br>
         <br>

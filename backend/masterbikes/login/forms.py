@@ -17,21 +17,10 @@ class RegistrationForm(forms.Form):
         if password1 and password2 and password1 != password2:
             raise forms.ValidationError('Las contraseñas no coinciden')
     
-    #def clean_username(self):
-    #    username = self.cleaned_data['username']
-    #    return validate_username(username)
-    #def clean_name(self):
-    #    cleaned_data = super().clean()
-    #    username1 = cleaned_data.get['username']
-    #    existe = User.objects.filter(username=username1).exists()
-    #   if existe:
-    #       raise ValidationError('Este nombre ya existe')        
-#def validate_username(username):
-#        if User.objects.filter(username=username).exists():
-#            raise forms.ValidationError("El nombre de usuario ya está en uso.")
-#        if any(char.isdigit() for char in username):
-#            raise forms.ValidationError("El nombre de usuario no puede contener números.")
-#        return username
+class repairForm(forms.Form):
+    fecha_reparacion = forms.DateField() 
+    descripcion = forms.CharField(max_length=200)
+    tipo_reparacion = forms.Select()
 
 
             
