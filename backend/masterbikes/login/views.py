@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from models.models import Cliente, TipoBicicleta, FormaPago, Arriendo, Bicicleta, ArriendoBicicleta
+from models.models import TipoReparacion, FormaPago, Arriendo, Bicicleta, ArriendoBicicleta,Reparacion
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from .forms import RegistrationForm
+from .forms import RegistrationForm,repairForm
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.utils import timezone
+import datetime
 
 # Create your views here.
 def auth_login(request):
@@ -133,3 +135,32 @@ def guardado(request):
             objArrBic.save()
 
     return render(request, 'guardado.html')
+
+@login_required
+def repair_form(request):
+    arreglamiento = TipoReparacion.objects.all()
+    if request.method == "POST":
+        form = repairForm(request.POST)
+        if form.is_valid():
+            fecha_reparacion = request.POST['fecha_reparacion']
+            descripcion = request.POST['descripcion']
+            tipo_reparacion = request.POST['tipo_reparacion']
+            fecha_convertida = datetime.datetime.strptime(fecha_reparacion, '%Y-%m-%d').date()
+            if fecha_convertida < timezone.now().date():
+                messages.error(request, "La fecha no puede ser anterior a la fecha actual.")
+                return redirect('repair_form')
+            objTyperepair = TipoReparacion.objects.get(id=tipo_reparacion) 
+            user_id = request.user.id
+            objUser = User.objects.get(id=user_id)
+            objRepair = Reparacion.objects.create(
+                fecha_reparacion = fecha_reparacion,
+                descripcion = descripcion,
+                cliente = objUser,
+                tipo_reparacion = objTyperepair 
+            )
+            objRepair.save()
+            messages.success(request,"Registro añadido correctamente!")
+            return redirect('repair_form') 
+        else:
+            print(form.errors)
+    return render(request,'repair_form.html',{'tipo_reparacion':arreglamiento})            

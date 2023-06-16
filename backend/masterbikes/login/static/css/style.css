@@ -203,11 +203,11 @@ input, label{
 
 .degradado{
         
-    background:linear-gradient(white 25%, #ff7455);
-    background:-webkit-linear-gradient(white 25%, #ff7455);
-    background:-moz-linear-gradient(white 25%, #ff7455);
-    background:-o-linear-gradient(white 25%, #ff7455);
-    background:-ms-linear-gradient(white 25%, #ff7455);
+    background:linear-gradient(rgba(255, 255, 255, .5) 100%, #ff7455);
+    background:-webkit-linear-gradient(rgba(255, 255, 255, .5) 100%, #ff7455);
+    background:-moz-linear-gradient(rgba(255, 255, 255, .5) 100%, #ff7455);
+    background:-o-linear-gradient(rgba(255, 255, 255, .5) 100%, #ff7455);
+    background:-ms-linear-gradient(rgba(255, 255, 255, .5) 100%, #ff7455);
 
 }
 
@@ -257,3 +257,28 @@ Borde...
 
 }
 
+.blank{
+  height: 600px;
+}
+
+.form-template{
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, .5);
+  box-shadow: 0 5px 15px rgba(0, 0,0, .1);    
+  backdrop-filter: blur(15px); 
+  padding: 2rem;
+  width: 80%;
+}
+
+.select-style{
+  width: 100%;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
