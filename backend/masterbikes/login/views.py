@@ -6,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 from .forms import RegistrationForm,repairForm
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.utils import timezone
+import datetime
 
 # Create your views here.
 def auth_login(request):
@@ -143,6 +145,10 @@ def repair_form(request):
             fecha_reparacion = request.POST['fecha_reparacion']
             descripcion = request.POST['descripcion']
             tipo_reparacion = request.POST['tipo_reparacion']
+            fecha_convertida = datetime.datetime.strptime(fecha_reparacion, '%Y-%m-%d').date()
+            if fecha_convertida < timezone.now().date():
+                messages.error(request, "La fecha no puede ser anterior a la fecha actual.")
+                return redirect('repair_form')
             objTyperepair = TipoReparacion.objects.get(id=tipo_reparacion) 
             user_id = request.user.id
             objUser = User.objects.get(id=user_id)
@@ -153,9 +159,8 @@ def repair_form(request):
                 tipo_reparacion = objTyperepair 
             )
             objRepair.save()
-            return redirect('index') 
+            messages.success(request,"Registro añadido correctamente!")
+            return redirect('repair_form') 
         else:
             print(form.errors)
     return render(request,'repair_form.html',{'tipo_reparacion':arreglamiento})            
-        
-

@@ -18,7 +18,7 @@ class RegistrationForm(forms.Form):
             raise forms.ValidationError('Las contraseñas no coinciden')
     
 class repairForm(forms.Form):
-    fecha_reparacion = forms.DateField() 
+    fecha_reparacion = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'})) 
     descripcion = forms.CharField(max_length=200)
     tipo_reparacion = forms.Select()
 

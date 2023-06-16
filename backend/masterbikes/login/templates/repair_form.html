@@ -6,14 +6,29 @@
 
     <form method="POST" action="" class="box">
       {% csrf_token %}
-
+      <br>
+      {% if messages%}
+        {%for msg in messages%}
+          {%if msg.tags == 'error' %}
+          <div class="alert alert-danger  alert-dismissible fade show" role="alert">
+            <strong>{{ msg }}</strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div> 
+          {%elif msg.tags == 'success'%}
+          <div class="alert alert-success  alert-dismissible fade show" role="alert">
+            <strong>{{ msg }}</strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div> 
+          {%  endif %} 
+        {% endfor %}
+      {%endif%}  
       <div class="form-floating mb-3">
         <br>
         <input type="date" class="form-control" id="fecha_reparacionId" name="fecha_reparacion" required/>
         <label for="fecha_reparacionId" class="form-label">Fecha de reparacion</label>
         <br>
       </div>
-
+      <span id="pFecha"></span>
       <div class="form-floating">
         <br>
         <textarea class="form-control" placeholder="Describa su problema" id="descripcionId" name="descripcion"></textarea>
