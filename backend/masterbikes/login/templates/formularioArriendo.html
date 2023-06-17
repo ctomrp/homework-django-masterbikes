@@ -23,14 +23,14 @@
     <br />
 
 
-    <div class="row">
+    <div class="row text-center">
       <div class="col-2"></div>
 
-      <div class="col-4 text-center">
+      <div class="col-4">
         <h5 class="">Escoger bicicleta(s)</h5>
         <!--  -->
         <!--  -->
-        <select id="bicicletasID" size="6" class="w-100 linea3 form-select">
+        <select id="bicicletasID" class="w-100 linea3 form-select">
           <optgroup label="Paseo" id="paseoID1">
             {% for i in tipo1 %}
             <option value="{{i.id}}">
@@ -69,7 +69,7 @@
       <div class="col-4 text-center">
         <h5 class="">Bicicleta(s) por Arrendar</h5>
 
-        <select id="carritoID" size="6" class="linea3 w-100 form-select">
+        <select id="carritoID" class="linea3 w-100 form-select">
           <optgroup label="Paseo" id="paseoID2"></optgroup>
 
           <optgroup label="Montaña" id="montanaID2"></optgroup>
