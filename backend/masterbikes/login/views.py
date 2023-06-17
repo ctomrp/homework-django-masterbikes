@@ -106,7 +106,10 @@ def guardado(request):
                 
         objPago = FormaPago.objects.get(id = formaPago)
         objCliente = User.objects.get(id = request.user.id)
-
+        fecha_convertida = datetime.datetime.strptime(inicio, '%Y-%m-%d').date()
+        if fecha_convertida < timezone.now().date():
+            messages.error(request, "La fecha no puede ser anterior a la fecha actual.")
+            return redirect('formularioarriendo')
         objArr = Arriendo.objects.create(
             deposito_garantia = garantia,
             cliente = objCliente,
