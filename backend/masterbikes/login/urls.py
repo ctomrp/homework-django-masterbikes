@@ -11,7 +11,7 @@ urlpatterns = [
     path('recover_password',recover_password,name='recover_password'),
     path('formularioarriendo',formularioarriendo,name='formularioarriendo'),
     path('repair_form',repair_form,name='repair_form'),
-    path('logout',exit,name='exit'),
+    path('logout/',exit,name='exit'),
 
 
 

@@ -13,7 +13,7 @@
   <body>
     <div class="bg">
       <nav class="navbar navbar-expand-lg p-2 navbar-light bg-light shadow-lg">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ '' }}">
           <div class="foto-icon mx-auto">
             <img
               src="../static/assets/icon.png"
@@ -38,7 +38,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#"
+            <a class="nav-item nav-link active" href="{{ '' }}"
               >Home <span class="sr-only">(current)</span>
             </a>
             {% if request.user.is_authenticated %}
