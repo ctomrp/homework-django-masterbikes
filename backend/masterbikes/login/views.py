@@ -136,8 +136,8 @@ def guardado(request):
             )
 
             objArrBic.save()
-
-    return render(request, 'guardado.html')
+            messages.success(request,'¡Solicitud guardada con éxito!')
+    return render(request, 'formularioArriendo.html')
 
 @login_required
 def repair_form(request):
@@ -162,7 +162,7 @@ def repair_form(request):
                 tipo_reparacion = objTyperepair 
             )
             objRepair.save()
-            messages.success(request,"Registro añadido correctamente!")
+            messages.success(request,"Su solicitud se ha enviado correctamente!")
             return redirect('repair_form') 
         else:
             print(form.errors)
